@@ -42,7 +42,7 @@ After the bulk data was downloaded, it is recommended to verify the integrity of
 #for Unix and Windows
 ukbmd5 filename
 
-# for OSX
+#for OSX
 noah ukbmd5 filename
 ```
 Make sure that the MD5 checksum generated is exactly the one received in the email.
@@ -53,7 +53,7 @@ Datasets are supplied in a compressed encrypted format. The ukbunpack program de
 #for Unix and Windows
 ukbunpack ukbXXXXX.enc keyvalue/keyfile
 
-# for OSX
+#for OSX
 noah ukbunpack ukbXXXXX.enc keyvalue/keyfile
 ```
 `Keyvalue` represents the 64 character Password from the notification email, which you will need to input. `Keyfile` is the name of a plain text file holding the Password, which you will need to create. Either one will work.
@@ -64,6 +64,6 @@ The result of the unpacking program is a dataset in a custom UK Biobank format. 
 #for Unix and Windows
 ukbconv ukbXXXXX.enc_ukb r
 
-# for OSX
+#for OSX
 noah ukbconv ukbXXXXX.enc_ukb r
 ```

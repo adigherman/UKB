@@ -1,4 +1,4 @@
-# UKBimgTools
+# UKBImageTools
 Installing the UKBImageTools package
 
 You can install `UKBImageTools` from github with:

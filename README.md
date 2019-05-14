@@ -1,4 +1,7 @@
 # UKBImageTools
+[![Travis build status](https://travis-ci.com/adigherman/UKBImageTools.svg?branch=master)](https://travis-ci.org/adigherman/UKBImageTools)
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/adigherman/UKBImageTools?branch=master&svg=true)](https://ci.appveyor.com/project/adigherman/UKBImageTools)
+
 Installing the UKBImageTools package
 
 You can install `UKBImageTools` from github with:
@@ -67,3 +70,6 @@ ukbconv ukbXXXXX.enc_ukb r
 #for OSX
 noah ukbconv ukbXXXXX.enc_ukb r
 ```
+
+# Usage
+Both UKB data and binary utilities must be in the same folder.

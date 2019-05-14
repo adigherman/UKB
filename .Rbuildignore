@@ -1,2 +1,4 @@
+^\.travis\.yml$
+^appveyor\.yml$
 ^UKBImageTools\.Rproj$
 ^\.Rproj\.user$

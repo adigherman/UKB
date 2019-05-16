@@ -85,14 +85,10 @@ Retrieving multiple datafiles as a batch from UK Biobank requires the creation o
 ukb_fetch_all(ukb_data,'20252-2.0',path='/full/path/to/UKBdata')
 #ukb_fetch_all(ukb_data,1975,path='/full/path/to/UKBdata')
 ```
-Once the file is saved locally, the `ukbfetch` can be used to retrieve all associated images using as parameter the name of the file that was created (eg. 20252-2.0.txt). 
+Once the file is saved locally, the `ukbfetch` can be used to retrieve all associated images using as parameter the name of the file that was created (eg. 20252-2.0.txt). If the UKB key file is in the same folder and named .ukbkey you do not need to append -akeyfilename to the ukbfetch command.
 ```
 # For unix and Windows
-# if the UKB key file is in the same folder and it's named .ukbkey
 ukbfetch -b20252-2.0.txt
-# UKB key has a different name (eg. ubk1234.key)
-ukbfetch -b20252-2.0.txt -aubk1234.key
-
 
 # For OSX
 # noah will not accept ukbfetch parameters and will error out. The solution

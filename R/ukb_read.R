@@ -10,7 +10,7 @@ ukb_read = function(fileset,
                     path = ".",
                     ...)
 {
-    ukb_data <- ukb_df(fileset, path,...)
+    ukb_data <- ukb_df(fileset, path, ...)
 
     return(ukb_data)
 }

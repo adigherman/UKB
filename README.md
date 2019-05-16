@@ -78,3 +78,9 @@ Next we should create a dataframe with usable column names. To do so, we'll use 
 ```
 ukb_data <- ukb_read("ukbXXXXX", path = "/full/path/to/UKBdata")
 ```
+
+# Create bulk download file for a specific UDI
+Retrieving multiple datafiles as a batch from UK Biobank requires the creation of a bulk file that contains the person and data identifiers. The `ukb_fetch_all` function will create such a file for all existing entries for a specific UDI. The example below will create a batch file to retrieve all T1 structural brain images (UDI 20252-2.0, column # 1975).
+```
+ukb_fetch_all(ukb_data,'20252-2.0',path='/full/path/to/UKBdata')
+```

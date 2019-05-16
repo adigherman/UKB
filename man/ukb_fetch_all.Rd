@@ -4,14 +4,16 @@
 \alias{ukb_fetch_all}
 \title{Create batch fetch file for all non NA values}
 \usage{
-ukb_fetch_all(ukb_data, column_identifier)
+ukb_fetch_all(ukb_data, column_identifier, path = ".")
 }
 \arguments{
+\item{ukb_data}{the UK Biobank dataframe}
+
 \item{column_identifier}{the column identifier, this can be
 a column number, the UDI (Unique Data Identifier) or the
 column name (description)}
 
-\item{ubk_data}{the UK Biobank dataframe}
+\item{path}{location where the batch file will be saved}
 }
 \description{
 Will create a batch download file to be used

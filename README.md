@@ -1,5 +1,5 @@
 # UKBImageTools
-[![Travis build status](https://travis-ci.com/adigherman/UKBImageTools.svg?branch=master)](https://travis-ci.org/adigherman/UKBImageTools)
+[![Travis build status](https://travis-ci.com/adigherman/UKBImageTools.svg?branch=master)](https://travis-ci.com/adigherman/UKBImageTools)
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/adigherman/UKBImageTools?branch=master&svg=true)](https://ci.appveyor.com/project/adigherman/UKBImageTools)
 
 Installing the UKBImageTools package

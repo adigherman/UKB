@@ -1,13 +1,13 @@
 Package: UKBImageTools
-Title: Retrieve NIFTi files from UK Biobank
+Title: Creates bulk download scripts for UK Biobank bulk images
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Adi",
            family = "Gherman",
            role = c("aut", "cre"),
            email = "adig@jhu.edu")
-Description: Retrieves NIFTi files from UK Biobank database and/or creates a batch download file that can
-  be used locally (without R) to download the files.
+Description: Provides the ability to query the UK Biobank data and 
+  creates bulk download scripts files to be used locally.
 License: GPL-2
 Encoding: UTF-8
 LazyData: true

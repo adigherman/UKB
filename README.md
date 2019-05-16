@@ -62,14 +62,19 @@ noah ukbunpack ukbXXXXX.enc keyvalue/keyfile
 `Keyvalue` represents the 64 character Password from the notification email, which you will need to input. `Keyfile` is the name of a plain text file holding the Password, which you will need to create. Either one will work.
 
 ### Convert data for R
-The result of the unpacking program is a dataset in a custom UK Biobank format. The `ukbconv` program will be used to transform the data into a format suitable for the R language.
+The result of the unpacking program is a dataset in a custom UK Biobank format. The `ukbconv` program will be used to transform the data into a format suitable for the R language. The docs flag creates an html file containing a field-code-to-description table.
 ```
 #for Unix and Windows
 ukbconv ukbXXXXX.enc_ukb r
+ukbconv ukbXXXXX.enc_ukb docs
 
 #for OSX
 noah ukbconv ukbXXXXX.enc_ukb r
+noah ukbconv ukbXXXXX.enc_ukb r
 ```
 
-# Usage
-Both UKB data and binary utilities must be in the same folder.
+# Create UK Biobank data.frame
+Next we should create a dataframe with usable column names. To do so, we'll use the `ukb_read` function. This function is calling the `ukb_df` function from the [ukbtools](https://github.com/kenhanscombe/ukbtools) package and takes in two arguments: the prefix of the UKB files (eg. ukbxxxxx) and the path where the files are stored.
+```
+ukb_data <- ukb_read("ukbXXXXX", path = "/full/path/to/UKBdata")
+```

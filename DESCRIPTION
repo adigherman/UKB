@@ -8,6 +8,7 @@ Authors@R:
            email = "adig@jhu.edu")
 Description: Provides the ability to query the UK Biobank data and 
   creates bulk download scripts files to be used locally.
+Imports: ukbtools
 License: GPL-2
 Encoding: UTF-8
 LazyData: true

@@ -83,4 +83,20 @@ ukb_data <- ukb_read("ukbXXXXX", path = "/full/path/to/UKBdata")
 Retrieving multiple datafiles as a batch from UK Biobank requires the creation of a bulk file that contains the person and data identifiers. The `ukb_fetch_all` function will create such a file for all existing entries for a specific UDI. The example below will create a batch file to retrieve all T1 structural brain images (UDI 20252-2.0, column # 1975).
 ```
 ukb_fetch_all(ukb_data,'20252-2.0',path='/full/path/to/UKBdata')
+#ukb_fetch_all(ukb_data,1975,path='/full/path/to/UKBdata')
+```
+Once the file is saved locally, the `ukbfetch` can be used to retrieve all associated images using as parameter the name of the file that was created (eg. 20252-2.0.txt). 
+```
+# For unix and Windows
+# if the UKB key file is in the same folder and it's named .ukbkey
+ukbfetch -b20252-2.0.txt
+# UKB key has a different name (eg. ubk1234.key)
+ukbfetch -b20252-2.0.txt -aubk1234.key
+
+
+# For OSX
+# noah will not accept ukbfetch parameters and will error out. The solution
+# is to create a bash file that contains the command to run 
+echo "./ukbfetch -b20252-2.0.txt" > run_noah.sh
+noah run_noah.sh
 ```

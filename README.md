@@ -94,5 +94,5 @@ ukbfetch -b20252-2.0.txt
 # noah will not accept ukbfetch parameters and will error out. The solution
 # is to create a bash file that contains the command to run 
 echo "./ukbfetch -b20252_2_0.txt" > run_noah.sh
-noah run_noah.sh
+noah < run_noah.sh
 ```

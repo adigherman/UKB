@@ -8,10 +8,10 @@
 #' @return UK Biobank set in a data.frame with usable column names
 #' @export
 ukb_read = function(fileset,
-                    path = ".",
-                    ...)
+                    path = "."
+                    )
 {
-    ukb_data <- ukb_df(fileset, path, ...)
+    ukb_data <- ukb_df(fileset, path)
 
     return(ukb_data)
 }

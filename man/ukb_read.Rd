@@ -4,7 +4,7 @@
 \alias{ukb_read}
 \title{Read in the UKB data}
 \usage{
-ukb_read(fileset, path = ".", ...)
+ukb_read(fileset, path = ".")
 }
 \arguments{
 \item{fileset}{The prefix for a UKB fileset, e.g., ukbxxxx (for ukbxxxx.tab, ukbxxxx.r, ukbxxxx.html)}

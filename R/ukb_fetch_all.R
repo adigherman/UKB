@@ -12,6 +12,8 @@
 #'
 #' @importFrom stringr str_extract
 #' @importFrom utils write.table
+#'
+#' @export
 ukb_fetch_all = function (ukb_data,
                           column_identifier,
                           path = ".")

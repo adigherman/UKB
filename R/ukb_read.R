@@ -6,6 +6,7 @@
 #' @importFrom ukbtools ukb_df
 #'
 #' @return UK Biobank set in a data.frame with usable column names
+#' @export
 ukb_read = function(fileset,
                     path = ".",
                     ...)

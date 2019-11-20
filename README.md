@@ -13,14 +13,7 @@ remotes::install_github("adigherman/UKBImageTools")
 # System dependencies
 
 ### OSX
-Unfortunately, UK Biobank currently (as of 05/14/2019) only provides binaries for unix and Windows OS. Natively, OSX is not able to run unix binaries, however, thanks to [noah](https://github.com/linux-noah/noah) this is possible. The quickest way to install `noah` is by using `Homebrew`:
-```
-$ brew install linux-noah/noah/noah
-$ noah
-```
-`Macports` can also be usied to install `noah`. Please check the [noah GitHub](https://github.com/linux-noah/noah) for additional details and documentation.
-
-In order to be able to successfuly fetch UKB data, one additional step is needed after `noah` was installed. The `resolv.conf` file needs to be edited and have it point to Google's public DNS (8.8.8.8). To do this `vi` or `vim` or any other editor can be used. The `resolv.conf` file is located inside your user home folder (eg. `~/.noah/tree/etc/resolv.conf`). Modify the first `nameserver` IP address to `8.8.8.8` and save the file. 
+Unfortunately, UK Biobank currently (as of 05/14/2019) only provides binaries for unix and Windows OS. Natively, OSX is not able to run unix binaries.
 
 # Setup, download and convert UKB data
 Please consult the short guide to [using UKB data](https://biobank.ndph.ox.ac.uk/showcase/exinfo.cgi?src=accessing_data_guide) to familiarize yourself with the UKB tools and the overall UKB framework.
@@ -55,9 +48,6 @@ Datasets are supplied in a compressed encrypted format. The ukbunpack program de
 ```
 #for Unix and Windows
 ukbunpack ukbXXXXX.enc keyvalue/keyfile
-
-#for OSX
-noah ukbunpack ukbXXXXX.enc keyvalue/keyfile
 ```
 `Keyvalue` represents the 64 character Password from the notification email, which you will need to input. `Keyfile` is the name of a plain text file holding the Password, which you will need to create. Either one will work.
 
@@ -67,10 +57,6 @@ The result of the unpacking program is a dataset in a custom UK Biobank format. 
 #for Unix and Windows
 ukbconv ukbXXXXX.enc_ukb r
 ukbconv ukbXXXXX.enc_ukb docs
-
-#for OSX
-noah ukbconv ukbXXXXX.enc_ukb r
-noah ukbconv ukbXXXXX.enc_ukb r
 ```
 
 # Create UK Biobank data.frame
@@ -89,10 +75,4 @@ Once the file is saved locally, the `ukbfetch` can be used to retrieve all assoc
 ```
 # For unix and Windows
 ukbfetch -b20252-2.0.txt
-
-# For OSX
-# noah will not accept ukbfetch parameters and will error out. The solution
-# is to create a bash file that contains the command to run 
-echo "./ukbfetch -b20252_2_0.txt" > run_noah.sh
-noah < run_noah.sh
 ```

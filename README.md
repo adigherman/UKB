@@ -13,7 +13,7 @@ remotes::install_github("adigherman/UKBImageTools")
 # System dependencies
 
 ### OSX
-Unfortunately, UK Biobank currently (as of 05/14/2019) only provides binaries for unix and Windows OS. Natively, OSX is not able to run unix binaries.
+Unfortunately, UK Biobank currently (as of 11/20/2019) only provides binaries for unix and Windows OS. Natively, OSX is not able to run unix binaries.
 
 # Setup, download and convert UKB data
 Please consult the short guide to [using UKB data](https://biobank.ndph.ox.ac.uk/showcase/exinfo.cgi?src=accessing_data_guide) to familiarize yourself with the UKB tools and the overall UKB framework.
@@ -71,6 +71,13 @@ Retrieving multiple datafiles as a batch from UK Biobank requires the creation o
 ukb_fetch_all(ukb_data,'20252-2.0',path='/full/path/to/UKBdata')
 #ukb_fetch_all(ukb_data,1975,path='/full/path/to/UKBdata')
 ```
+
+# Filter data based on gender
+The first implemented filter is the gender and the function parameter is `gender`. It can take two values, `0` for female and `1` for male. By default, all subjects are returned but one can choose to return only female subjects via:
+```
+ukb_fetch_all(ukb_data,'20252-2.0',gender=0, path='/full/path/to/UKBdata')
+```
+
 Once the file is saved locally, the `ukbfetch` can be used to retrieve all associated images using as parameter the name of the file that was created (eg. 20252-2.0.txt). If the UKB key file is in the same folder and named .ukbkey you do not need to append -akeyfilename to the ukbfetch command.
 ```
 # For unix and Windows

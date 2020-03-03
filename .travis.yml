@@ -16,4 +16,4 @@ matrix:
   - r: devel
 
 before_install:
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then ntpdate -u time.apple.com; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then sudo ntpdate -u time.apple.com; fi

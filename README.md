@@ -78,6 +78,7 @@ The first implemented filter is the gender and the function parameter is `gender
 ukb_fetch_all(ukb_data,'20252-2.0',gender=0, path='/full/path/to/UKBdata')
 ```
 
+# Download bulk data locally
 Once the file is saved locally, the `ukbfetch` can be used to retrieve all associated images using as parameter the name of the file that was created (eg. 20252-2.0.txt). If the UKB key file is in the same folder and named .ukbkey you do not need to append -akeyfilename to the ukbfetch command.
 ```
 # For unix and Windows

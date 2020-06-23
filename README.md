@@ -38,8 +38,6 @@ After the bulk data was downloaded, it is recommended to verify the integrity of
 #for Unix and Windows
 ukbmd5 filename
 
-#for OSX
-noah ukbmd5 filename
 ```
 Make sure that the MD5 checksum generated is exactly the one received in the email.
 

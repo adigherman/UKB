@@ -6,7 +6,7 @@ os_type <- function()
 
 sys_type <- function() 
 {
-  switch(Sys.info()["sysname"], "windows"="windows", "Darwin"="macos", "unix"="linux", "Unknown OS")
+  switch(Sys.info()["sysname"], "windows"="windows", "Darwin"="macos", "unix"="linux", "Linux"="linux", "Unknown OS")
 }
 
 #' Get Path to UKB Utilitiy
@@ -30,6 +30,7 @@ ukb_util_path = function(
   
   util = match.arg(util)
   st = sys_type()
+  
   stopifnot(st %in% c("windows", "linux", "macos"))
   
   ext = ""

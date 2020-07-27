@@ -1,13 +1,13 @@
-# UKBImageTools
-[![Travis build status](https://travis-ci.com/adigherman/UKBImageTools.svg?branch=master)](https://travis-ci.com/adigherman/UKBImageTools)
-[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/adigherman/UKBImageTools?branch=master&svg=true)](https://ci.appveyor.com/project/adigherman/UKBImageTools)
+# UKB
+[![Travis build status](https://travis-ci.com/adigherman/UKB.svg?branch=master)](https://travis-ci.com/adigherman/UKB)
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/adigherman/UKB?branch=master&svg=true)](https://ci.appveyor.com/project/adigherman/UKB)
 
-Installing the UKBImageTools package
+Installing the UKB package
 
-You can install `UKBImageTools` from github with:
+You can install `UKB` from github with:
 ``` {r}
 # install.packages("remotes")
-remotes::install_github("adigherman/UKBImageTools")
+remotes::install_github("adigherman/UKB")
 ```
 
 # System dependencies

@@ -1,15 +1,13 @@
-Package: UKBImageTools
+Package: UKB
 Title: Creates bulk download scripts for UK Biobank bulk images
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "Adi",
-           family = "Gherman",
-           role = c("aut", "cre"),
-           email = "adig@jhu.edu")
+    c(person("Adi Gherman","Developer", role = c("aut", "cre"), email = "adig@jhu.edu"),
+      person("John Muschelli", "Developer", role = "ctb", email = "muschellij2@gmail.com"))
 Description: Provides the ability to query the UK Biobank data and 
   creates bulk download scripts files to be used locally.
 Imports: ukbtools, stringr
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.1
